@@ -1,0 +1,222 @@
+body {
+    background-color: rgb(252, 245, 235);
+    margin: 0; /*Così il sito non ha margini con gli estremi della pagina*/
+    font-style: normal;
+  }
+
+  /*zona alta*/
+h1 {
+    font-size: 42px;
+    margin: 18px 0;
+}
+
+  
+header {
+    position: relative;
+    display: flex;
+    height: 80px;
+    background-color: rgba(128,128,128,.7);
+    color: white;
+}
+   
+header h1 {
+    position: absolute;
+    left: 20%;
+    font-family: 'Helvetica', sans-serif;
+    justify-content: flex-start;
+    border: 2px solid white;
+    font-size: 32px;
+    text-align: center;
+    padding: 5px 5px;
+    margin-top:15px;
+}
+/*zona media*/
+
+h2{
+    padding-top: 15px; 
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 5px;
+    color: darkgreen;
+}
+
+
+#sparizione{
+    height: 300px; 
+    background-color: rgba(22, 255, 22, 0.238);
+    border: 5px solid green;
+}
+
+#descrizione{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /*i flex si posizionano proporzionali nel foglio*/
+    text-align:center;
+  }
+
+#mipiace{
+      display: flex; 
+      text-align:center; 
+      flex-direction: row;
+  }
+
+#descrizione div{
+    width: 350px; /*Calcola lo spessore (larghezza) delle immagini    calc(50% - 20px)*/
+    font-size: 1em;
+    background-color: rgba(54, 43, 43, 0.734);
+    margin-top:25px;
+    height: 100%;
+  }
+
+#mipiace div{
+    width: 160px;
+    font-size: 1em; 
+    height: 90%;
+    margin-right:20px;
+}
+
+#descrizione img{
+    width: 90%;
+    height: 340px;
+    border: 6px solid rgba(185, 118, 30);
+}
+
+#mipiace img{
+    width: 90%;
+    height: 130px;
+    border: 6px solid rgba(185, 118, 30);
+}
+
+#descrizione h1{
+    font-family: Snell Roundhand, cursive;
+    color: goldenrod
+}
+
+#mipiace h1{
+    font-size: 20px;
+    font-family: Snell Roundhand, cursive;
+    color: goldenrod
+}
+
+#descrizione p{
+    font-family: 'Times New Roman', serif; 
+    color: rgb(206, 158, 67);
+}
+
+  #descrizione span{
+      color: orange;
+      cursor:pointer;
+  }
+
+  #descrizione button{ 
+      background-color:lightgreen;
+      color: green;
+      margin-left: 10px;
+      cursor: pointer;
+  }
+
+  #mipiace button{
+      background-color: rgb(228, 156, 109);
+      color: red;
+      cursor: pointer;
+  }
+  
+   #centro{
+      background-image: url(https://cdn.gelestatic.it/businessinsider/it/2017/07/transpod1.jpg);
+      background-size: cover;
+      background-position: center;
+      height: 1200px; /*con 100% ogni volta che apro le immagini mi ampia l'immagine dietro e non è bello da vedere*/
+  }
+
+  .hidden{
+      display: none;
+  }
+
+  #nome, #barra p{
+      display: inline;
+  }
+
+  #barra p{
+      font-size: 20px;
+      color: rgba(185, 118, 30);
+  }
+
+  #barra{
+      text-align:center;
+      padding-top: 10px;
+  }
+  /*zona finale*/
+footer {
+    background-color: rgba(128,128,128,.7);
+    color:white;
+    padding: 50px;
+    text-align: center;
+}
+  
+footer p{
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: small;
+}
+
+/*zona cellulare*/
+@media(max-width: 1400px){
+    #descrizione div{
+        width: 280px; /*Calcola lo spessore (larghezza) delle immagini    calc(50% - 20px)*/
+      }
+
+      #descrizione img{
+        width: 90%;
+        height: 280px;
+    }
+
+    #descrizione h1{
+        font-size: 30px;
+    }
+
+    #descrizione button{
+        display: none;
+    }
+
+    header{
+        display: none;
+    }
+
+    #centro{
+        height: 100%;
+    }
+}
+
+@media(max-width: 1120px){
+    #centro{
+        height:110%;
+    }
+}
+
+@media(max-width: 1000px){
+    #descrizione{
+        display: flex;
+        flex-direction:column;
+        justify-content: space-around; /*i flex si posizionano proporzionali nel foglio*/
+        text-align:center;
+      }
+
+      #descrizione div{
+          width: 100%;
+      }
+
+      #descrizione img{
+        width: 95%;
+        height: 300px;
+    }
+
+     
+  #centro{
+    background-image: none;
+    height: 100%;
+    }
+
+    body {
+        background-color: rgba(187, 149, 26, 0.544);
+    }
+}
